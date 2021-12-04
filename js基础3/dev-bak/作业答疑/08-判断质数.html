@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var num = prompt("请输入一个数字");
+      // 方式一: 根据因数个数
+      // var count = 0;
+      // for (var i = 1; i <= num; i++) {
+      //   if (num % i === 0) {
+      //     // console.log(i);
+      //     count++;
+      //   }
+      // }
+      // if (count == 2) {
+      //   alert("是质数");
+      // } else {
+      //   alert("不是质数");
+      // }
+
+      // 方式二
+      // 2 到 num-1  之间 没有他的因数
+      var flag = true; // flag  这个变量表示  是否是质数   true 代表 是   false  代表 不是
+      for (var i = 2; i <= num - 1; i++) {
+        // 只需要 遇到一个因数 就可以证明 它 不是质数
+        // 但是 想要证明 他是 质数,必须等 循环结束
+        if (num % i === 0) {
+          // alert("不是质数");
+          flag = false;
+          break;
+        }
+      }
+      // 循环结束后
+      // 根据flag 的值 就知道了  是否是质数
+
+      if (flag) {
+        alert("是质数");
+      } else {
+        alert("不是质数");
+      }
+
+      // if (flag === true) {
+      //   alert("是质数");
+      // } else {
+      //   alert("不是质数");
+      // }
+    </script>
+  </body>
+</html>

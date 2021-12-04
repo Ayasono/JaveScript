@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 写一个程序  随机 出一个  rgba(23,34,56,0.8) 的颜色   // 字符串的拼接  和 Math.random()
+
+      // [0,255]
+      var red = Math.floor(Math.random() * 256);
+      var green = Math.floor(Math.random() * 256);
+      var blue = Math.floor(Math.random() * 256);
+      // [0,10]/10
+      var alph = Math.floor(Math.random() * 11) / 10;
+      // var str = `rgba(${red},${green},${blue},${alph})`;
+
+      var str = "rgba(" + red + "," + green + "," + blue + "," + alph + ")";
+      console.log(str);
+    </script>
+  </body>
+</html>

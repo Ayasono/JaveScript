@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 控制台 输出 100次  1
+
+      // var i =1; 声明循环变量  初始值 1
+      // i<=100 是循环的执行条件 ,符合条件 执行循环体
+      // i++ 循环的步长 ,每次循环之后 i 值如何变化
+
+      // 学习for循环 ,就是 搞清楚 代码怎么走
+      for (var i = 1; i <= 100; i++) {
+        // 循环体
+        console.log(1);
+      }
+      // 先声明循环变量 ===> 条件判断(真)==> 执行循环体===> 执行步长 ==>条件判断(真)==>执行循环体==>执行步长===>条件判断....
+
+      // 打印1--100之间 所有的 偶数
+      for (var i = 1; i <= 100; i++) {
+        // 偶数才打印
+        if (i % 2 == 0) {
+          console.log(i);
+        }
+      }
+
+      for (var i = 1; i < 10; i = i + 3) {
+        i = i + 1;
+        console.log(i);
+      }
+      // 2  6  10
+
+      for (var i = 1; i <= 10; i++) {}
+      console.log(i); // 11
+
+      for (var i = 1; i < 7; i = i + 3) {}
+      console.log(i); // 7
+    </script>
+  </body>
+</html>

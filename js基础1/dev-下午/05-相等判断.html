@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // ==  用作 相等判断 
+
+
+        console.log(100 === 100); // true
+
+        console.log(100 == '100'); // true
+        // 此时 有隐式转换, 字符串'100' 转换成了  数字  100 
+        console.log(true == 1);
+
+        // 慎用 ==  因为 这种相等判断  存在 隐式转换,  不严谨 
+        // !=  就是  ==   反面 
+
+
+
+
+
+        // 进行 严格的相等判断  可以使用 ===  (不发生隐式转换)
+        // 先比较数据类型,类型不一致 ,直接  false 
+        // 类型一致,再比较 
+
+        console.log(true === 1); // false
+        console.log('100' === 100); // false
+
+        // 严格不等于  !==   是 === 的反面 
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 函数的返回值:  就是 定义的 函数的 返回结果
+      // 开发人员定义的
+      // 比如 pop 定义的返回结果是什么:  删除的那个元素
+
+      function getSum(x, y) {
+        var result = x + y; // 算出来了 和
+
+        // 需要把 求出来的 和  返回出去
+        // 返回值的定义需要使用return 语句
+        return result; // 将result 代表的数据当做返回值 丢出去了
+
+        console.log("hello"); // 这句代码不会执行
+      }
+      // 注意:
+      // 1. 并不是所有的函数都有返回值,函数可以不定义返回值,
+      // 2. 当没有定义返回值的时候 ,默认 返回 undefined
+      // 3. return 具有退出函数的 功能,函数遇到return  就会立即结束(就是return 下边的语句不再执行)
+      // 4. return 后边可以什么都不跟,也代表退出函数,返回值是undefined
+      // 5. 返回值只能定义一个(一个函数只能有一个返回值),但是这个返回值可以是任意的数据类型
+
+      var temp = getSum(6, 10); // 1. 执行getSum() 2. 将getSum 的返回值 赋给 temp
+      console.log(temp);
+
+      // 区分 getSum  和 getSum()
+      console.log(getSum); //打印函数 getSum 这个函数 ,就跟打印变量 是一个道理
+      console.log(getSum(3, 5)); // 8 // 1.执行getSum  2.打印getSum的返回值 8
+
+      // 打印 `函数名()`  得到的是这个函数的返回值
+      var a = getSum(3, 5); // 把 getSum 的返回值 赋给  a
+    </script>
+  </body>
+</html>

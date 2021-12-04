@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- parseInt  和  parseFloat -->
+
+    <!-- int  整数  -->
+    <!-- float  小数 -->
+
+    <!-- 专门用于 将 字符串 转换成 数字类型  -->
+
+    <script>
+      var str = "24px";
+      // console.log("24px" + 48); // '24px48'
+      // 需要吧 24px  转成数字 24
+      // console.log(Number("24px")); // NaN
+
+      console.log(parseInt("24px")); // 24
+      console.log(parseInt("24.8px")); // 24
+
+      // 非string 类型时
+
+      console.log(parseInt(true)); // NaN
+      console.log(parseInt(168.23)); // 168
+
+      // parseFloat  同理  (会识别小数)
+
+      console.log(parseFloat("24.8px")); // 24.8
+
+      // 特殊用法
+      // 填入的第二个数据  表示 进制
+      // 会把 这个 字符串 当做 十六进制 对待
+      // 最终结果是  是十进制的数字
+      console.log(parseInt("21", 16));
+    </script>
+  </body>
+</html>

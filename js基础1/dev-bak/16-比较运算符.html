@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // >  <   >=  <=  ==(判断是否相等)  !=(不等于)
+
+      // 数字参与比较
+      //  比较运算的结果 只有 两个  true(代表关系成立)  或者  false(代表关系不成立)
+      console.log(5 > 3); // true
+      console.log(5 < 3); // false
+
+      // >=  大于或者等于
+      console.log(5 >= 6); // false
+      console.log(5 <= 6); // true
+
+      // 判断相等
+      console.log(5 == 5); // true
+      console.log(5 != 5); // false
+
+      // 如果有 非数字类型 参与比较
+
+      // 1. 一般 会 隐式转换成数字 ,然后比较
+      console.log(1 > true); // 1>1 false
+      console.log(1 > false); // 1>0  true
+      console.log(1 > "0"); // 1>0 true
+
+      console.log(10 < undefined); // 10<NaN  false
+      // NaN 参与的比较  都是 false
+
+      // 2.特殊情况：如果符号两侧的值都是字符串时，**不会**将其转换为数字进行比较。
+      // 就按照 字符串 一位一位比
+
+      console.log("63" > "456"); // true // 并不是 63>456
+      // 54>52
+      console.log("hello" == "hello"); // true
+
+      // 3.  相等判断 ==    不等于!=(是==的反面)
+      // ==  是存在 隐式转换的 ,有可能 并不是 严格意义上的相等
+      console.log(5 == "5"); //字符串隐式转换成数字了  true
+
+      // ===  严格相等 (不存在隐式转换)  !==(严格不等于)
+      // 会先判断数据类型  ,数据类型不一致 ,直接 false
+      // 数据类型一致  ,再比较
+      console.log(5 === "5"); // false
+
+      // 4. 对 null 和 undefined 进行比较
+
+      console.log(null == undefined); // true  记忆
+
+      console.log(null > 0); // false
+      console.log(null == 0); // false 不存在隐式转换 没有把 null 转成0
+
+      console.log(null >= 0); // 大于或者等于  // true  此时存在 隐式转换
+    </script>
+  </body>
+</html>

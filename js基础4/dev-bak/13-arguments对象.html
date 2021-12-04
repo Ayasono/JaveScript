@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 函数的实参对象，(包含了这个函数的所有实参信息的对象)
+      // 只能在函数内部使用
+      // 类数组形式
+
+      function add(x, y) {
+        // 函数内部自带一个对象 arguments
+        // 保存了这个函数调用时的所有实参信息,
+        console.log(arguments); // [10, 20, callee: ƒ, Symbol(Symbol.iterator): ƒ]  类数组/伪数组
+        // 具备数组形式,有长度属性,有索引,(可以用for循环),但是不具备数组的方法 pop /shift....
+        console.log(arguments.callee); // 这个函数本身
+
+        return x + y;
+      }
+
+      add(10, 20);
+    </script>
+  </body>
+</html>

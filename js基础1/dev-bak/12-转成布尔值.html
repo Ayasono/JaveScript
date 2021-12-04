@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 转成布尔值
+      // 利用 Boolean() 可以把 括号里边的数据 转成 布尔值 true 或者false
+      // 隐式转换 适用规则
+
+      console.log(Boolean(null)); // fals
+      console.log(Boolean(undefined)); // false
+
+      // 数字
+      // 0 和 NaN 会转成 false   其余都是true
+      console.log(Boolean(100)); // true
+      console.log(Boolean(0)); // false
+      console.log(Boolean(-10)); // true
+      console.log(Boolean(0.8)); // true
+      console.log(Boolean(NaN)); // false
+
+      // 字符串
+      // 只有空字符串会转成 false
+      console.log(Boolean("hello")); // true
+      console.log(Boolean("")); // false
+      console.log(Boolean("     ")); // true
+
+      // 只有五种情况 会变成  false
+      // 0  NaN  undefined  null ''
+    </script>
+  </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 写一个方法 ,实现求 任意两个数中的最小值
+      function min(a, b) {
+        if (a > b) {
+          return b;
+        } else {
+          return a;
+        }
+      }
+
+      console.log(min(10, 20));
+      console.log(min(13, 20));
+      console.log(min(30, 20));
+
+      // 写一个函数 `pow(x,n)`，返回 `x` 的 `n` 次方。
+
+      // 1. 创建函数
+      // 2. 考虑参数 (想调用时的场景)
+      // 3. 书写 要实现的功能
+      // 4. 考虑返回值的设定(需不需要)
+
+      function pow(x, n) {
+        var res = 1;
+        for (var i = 1; i <= n; i++) {
+          res = res * x;
+        }
+        return res;
+      }
+      var temp = pow(3, 10);
+      console.log(temp);
+    </script>
+  </body>
+</html>

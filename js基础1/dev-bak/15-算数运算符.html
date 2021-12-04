@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 算数运算符  +   -  *   /  ()  %(取余)
+
+      console.log(10 / 7);
+
+      console.log(10 % 7); // 取余 (求余数 求 10除以7 的 余数)
+
+      //如果参与的都是 数字  就是正常的数学运算
+
+      // 但是 如果是 非数字类型 参与运算 一般会发生隐式转换(会把所有非数字类型 转换成数字 然后运算)
+
+      console.log(10 + true); // 10+1 =11
+
+      // 2. NaN参与的 运算 结果依然是 NaN
+
+      // 3.做加法运算时,如果有字符串参与，都会先转换为字符串(不再转成数字)，然后再做拼串操作。
+      console.log(100 + "20"); // '10020'
+      console.log(100 + "hello"); //'100'+'hello' '100hello'
+    </script>
+  </body>
+</html>

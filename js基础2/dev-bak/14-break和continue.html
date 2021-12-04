@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // break 和 continue  用于 退出循环  但是两者 有一些区别
+
+      // 遍历 数据  for循环 最主要的用途 就是 遍历
+
+      // 当遍历到一半时,就找到了自己的既定目标,就可以此时 用 break 退出循环
+
+      for (var i = 0; i < 5; i++) {
+        if (i == 2) {
+          break; // 退出循环
+          // continue; // 退出当次循环 仅仅结束的是 i==2 这一次
+        }
+        console.log("i的值:" + i);
+      }
+
+      // break 也可以用 退出 while 循环
+    </script>
+  </body>
+</html>

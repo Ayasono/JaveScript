@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 方式一 字面量形式  'hello'  100 [1,2,3]
+      var user = {
+        username: "李四",
+        age: 24,
+      };
+
+      // 方式二 new Object()  // new 出来一个对象
+      // new  运算专门用于 构建对象(配合构造函数)
+
+      var obj = new Object(); // 空对象
+
+      console.log(user);
+      console.log(obj);
+
+      // 复杂一点的 对象
+      var obj2 = {
+        name: "张三",
+        age: 26,
+        sex: "男",
+        children: {
+          name: "小明",
+        },
+        sayName: function () {
+          console.log("smyhvae");
+        },
+        like: ["篮球", "打游戏"],
+      };
+
+      // 对象的属性值 可以是任意的数据类型
+
+      // sayName 属性 存储的是 一个 函数(行为),这样的属性 咱们一般叫做 方法
+      // 一般方法都是动态的(行为)  属性(特征)(静态)
+      // 对象上的方法
+      // 对象.方法名()
+      obj2.sayName();
+
+      // 对象属性名可以加引号也可以不加，建议不加。如果要使用一些特殊的名字，则必须加引号。
+    </script>
+  </body>
+</html>

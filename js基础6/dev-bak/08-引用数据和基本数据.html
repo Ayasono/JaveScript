@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 基本数据类型:  string  number  boolean  undefined  null
+      // 引用数据 : 对象  数组 函数
+
+      // 当我们用一个变量 保存 数据时 ,
+      // 如果数据是  基本数据类型,  那么这个变量 存的 就是这个数据本身
+      // 但是如果数据是引用数据类型 ,那么这个变量 存的是一个 引用地址(00xxbc) ,这个地址指向内存当中的 真实数据
+
+      // 钱包: 变量 (容器)
+      // 零钱: 基本数据 ,随身携带(真实的钱)
+      // 存款: 引用数据. 随身携带 银行卡(引用地址)   ===>  银行(真实钱)
+      var a = 100;
+      var obj = {
+        name: "张三",
+        age: 24,
+      };
+
+      // 这个差别 造成的 问题 (影响 )
+
+      var b = a; // 把 a的值(保存的值) 赋给 b
+      b = 200;
+      console.log(a); // 100
+
+      var temp = obj; // 把 obj 存的值(存的仅仅是 引用地址) 赋给  temp
+      // 相当于就是把引用地址 复制了一份 赋给了 变量  temp
+      // 此时 就是 temp 和 obj 保存了相同的地址 ,都指向内存中的 obj对象
+      temp.name = "李四";
+      console.log("temp", temp);
+      console.log("obj", obj);
+      // 所以 不管是 通过 obj 还是 temp 对真实数据做的操作,,,两个变量都会受到影响
+
+      // = 赋值 运算 仅仅 是把 变量保存的值 赋给 另外一个变量
+
+      // 对象如此 ,数组亦如此
+
+      // 对象的相等判断
+      var m = {};
+      var n = m; // 拷贝引用
+
+      alert(m == n); // true，都引用同一对象
+      alert(m === n); // true
+
+      var x = {}; // 有一个地址
+      var y = {}; // 也有一个地址
+      alert(x == y); // 相等吗? 不等 ,虽然都是空对象 ,但是内存当中的地址不同
+    </script>
+  </body>
+</html>

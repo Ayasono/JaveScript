@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // `arr.includes(item, from)` 
+    // item: 指 要找寻的元素 ,form 是开始索引(开始找寻的位置)
+    // — 从索引 `from` 开始搜索 `item`，如果找到则返回 `true`（如果没找到，则返回 `false`）
+    var arr = ["a", "b", "c", "d", "e", "d", "c"];
+    console.log(arr.includes('f',0)); // false
+    console.log(arr.includes('f')); // false 搜索区间不指定,默认是全部元素
+    console.log(arr.includes('d')); // true
+
+  </script>
+</body>
+</html>

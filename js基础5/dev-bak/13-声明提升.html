@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 变量先声明后使用 
+    // var a = 100;
+    // console.log(a);
+
+
+    // 在代码执行前,有一个预解析阶段
+    // 预解析阶段会把该作用域代码中的 var 声明 和函数function声明提升到所有代码之前
+
+    // 不止全局作用域有提升,函数作用域也有变量声明提升,但是只会提升到该函数作用域的最顶部
+
+    console.log(a); // undefined
+    var a = 200; // 虽然 他在打印语句的后边,但是其实在预解析阶段,var a;这样一个语句已经被提升到所有代码之前了(作用域最顶部)
+    // 提升的仅仅是声明动作,赋值动作不提升
+    // 真正执行顺序 
+    // var a;
+    // console.log(a); // undefined
+    // a = 200;
+
+    function say(){
+      console.log(b); // 找b undefined
+      var b = 100;
+      // 真正顺序
+      // var b;
+      // console.log(b);
+      // b =100;
+
+    }
+    say();
+
+    // 函数声明也存在提升
+    // function 声明的具名函数 会在 代码执行前,就提升到最前边
+    foo();
+    function foo(){
+      alert('你好')
+    }
+
+
+    // 匿名函数表达式
+    bar(); // bar is not a function
+    var bar = function(){
+      alert('bar函数')
+    }
+    // 真正顺序 
+    // var bar;
+    // bar();
+    // bar = function(){
+    //   alert('bar函数')
+    // }
+
+
+  </script>
+</body>
+</html>

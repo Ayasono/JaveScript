@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // if...else  二选一
+      // 多分支 就是 多选一
+
+      // 比如
+      // 90分以上  优秀
+      // 80分以上  良好
+
+      // 60分以上  及格
+      // 60分以下 不及格
+
+      var score = prompt("请输入你的成绩");
+      // 这里边 每一个 else  都暗含了之上的条件不符合
+      // 跳楼现象
+      if (score >= 90) {
+        alert("优秀");
+      } else if (score >= 80) {
+        alert("良好");
+      } else if (score >= 60) {
+        alert("及格");
+      } else {
+        alert("不及格");
+      }
+
+      // if (score >= 90) {
+      //   alert("优秀");
+      // }
+      // if (score >= 80 && score < 90) {
+      //   alert("良好");
+      // }
+
+      // if (score >= 60 && score < 80) {
+      //   alert("及格");
+      // }
+      // if (score < 60) {
+      //   alert("不及格");
+      // }
+    </script>
+  </body>
+</html>

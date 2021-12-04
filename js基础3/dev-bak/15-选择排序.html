@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 从待排序的元素当中 找出 本轮 最小的数,,放在 该放的位置
+
+      var arr = [13, 8, 24, 35, 17, 9];
+
+      // 第一轮
+      // var minIndex = 0; // 代表最小值的索引
+      // for (var i = 1; i < arr.length; i++) {
+      //   // 如果发现 arr[i] < min ,说明假设有错,立即更正
+      //   if (arr[i] < arr[minIndex]) {
+      //     minIndex = i;
+      //   }
+      // }
+      // // 交换到 首位arr[0]
+      // var temp = arr[0];
+      // arr[0] = arr[minIndex];
+      // arr[minIndex] = temp;
+      // console.log("第一轮结束", arr);
+      // // 第一轮结束 (6) [8, 13, 24, 35, 17, 9]
+
+      // 利用一个 外层循环  让 它执行  arr.length-1  轮
+
+      for (var j = 0; j < arr.length - 1; j++) {
+        var minIndex = j; // 代表最小值的索引
+        for (var i = j + 1; i < arr.length; i++) {
+          // 如果发现 arr[i] < min ,说明假设有错,立即更正
+          if (arr[i] < arr[minIndex]) {
+            minIndex = i;
+          }
+        }
+        // 交换到 arr[j]
+        var temp = arr[j];
+        arr[j] = arr[minIndex];
+        arr[minIndex] = temp;
+      }
+      console.log(arr);
+
+      // // 第二轮
+      // var minIndex = 1; // 代表最小值的索引
+      // for (var i = 2; i < arr.length; i++) {
+      //   // 如果发现 arr[i] < min ,说明假设有错,立即更正
+      //   if (arr[i] < arr[minIndex]) {
+      //     minIndex = i;
+      //   }
+      // }
+      // // 交换到 首位arr[1]
+      // var temp = arr[1];
+      // arr[1] = arr[minIndex];
+      // arr[minIndex] = temp;
+      // console.log("第二轮结束", arr);
+      // // 第二轮结束 (6) [8, 9, 24, 35, 17, 13]
+
+      // // 第三轮
+      // var minIndex = 2; // 代表最小值的索引
+      // for (var i = 3; i < arr.length; i++) {
+      //   // 如果发现 arr[i] < min ,说明假设有错,立即更正
+      //   if (arr[i] < arr[minIndex]) {
+      //     minIndex = i;
+      //   }
+      // }
+      // // 交换到 首位arr[2]
+      // var temp = arr[2];
+      // arr[2] = arr[minIndex];
+      // arr[minIndex] = temp;
+      // console.log("第三轮结束", arr);
+      // // 第三轮结束 (6) [8, 9, 13, 35, 17, 24]
+    </script>
+  </body>
+</html>

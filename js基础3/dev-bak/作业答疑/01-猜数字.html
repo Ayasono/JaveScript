@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 1--到 10
+
+      var target = Math.floor(Math.random() * 10) + 1;
+      // 方式一
+      // 借助了 result 这样一个变量 来表示  答题的 状态,猜错 继续猜 ,猜对  停止
+      var result = false; // 代表没有猜对
+      // //(false代表猜错) 猜错时 要 反复去猜  所以要加 !
+      while (!result) {
+        var num = Number(prompt("请输入一个数字"));
+        if (num < target) {
+          alert("猜小了");
+        } else if (num > target) {
+          alert("猜大了");
+        } else {
+          // 相等的情况
+          alert("猜对了");
+          result = true;
+        }
+      }
+
+      // 方式二
+      // while (true) {
+      //   var num = Number(prompt("请输入一个数字"));
+      //   if (num < target) {
+      //     alert("猜小了");
+      //   } else if (num > target) {
+      //     alert("猜大了");
+      //   } else {
+      //     // 相等的情况
+      //     alert("猜对了");
+      //     break;
+      //   }
+      // }
+    </script>
+  </body>
+</html>

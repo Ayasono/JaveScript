@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 编写函数 URL处理 "http://www.xxx.com/?name=bf&age=23&from=baidu" ,
+      // 想办法获取url的参数信息(?后边) 包装成对象{name:'bf',age:23,form:'baidu'}
+
+      var url = "http://www.xxx.com/?name=bf&age=23&from=baidu";
+      // 截取出 ? 后边的字符串
+      var idx = url.indexOf("?");
+      var paramsStr = url.slice(idx + 1);
+      console.log(paramsStr);
+      var paramsArr = paramsStr.split("&"); // ['name=bf','age=23','from=baidu']
+      // 循环一个 key=value  就 往对象里边追加一条属性信息
+      var temp = {};
+      for (var i = 0; i < paramsArr.length; i++) {
+        var kv = paramsArr[i]; // 'name=bf'
+        // 追加  temp.name = 'bf'  所以需要从字符串中 取出 name 属性名   部分属性值
+        var kvArr = kv.split("="); //["name", "bf"];
+        temp[kvArr[0]] = kvArr[1];
+      }
+      console.log(temp);
+    </script>
+  </body>
+</html>

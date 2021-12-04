@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [13, 8, 24, 35, 17, 9];
+
+      // 求出这个数组当中的 最小值 是多少 ?
+      // 求出这个数组当中的 最小值对应的索引是几?
+
+      var min = arr[0]; // min代表最小值 ,先假设为 是数组的第一个元素
+
+      var minIndex = 0; // 代表最小值的索引
+
+      for (var i = 1; i < arr.length; i++) {
+        // 如果发现 arr[i] < min ,说明假设有错,立即更正
+        if (arr[i] < min) {
+          min = arr[i];
+          minIndex = i;
+        }
+      }
+    </script>
+  </body>
+</html>

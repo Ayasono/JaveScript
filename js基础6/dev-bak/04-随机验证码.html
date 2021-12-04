@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 编写函数 获取四位随机验证码 "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM"
+
+      function getCode(n) {
+        var str =
+          "0123456789qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM";
+
+        // 随机 str 这个字符串的 索引 [0,61]
+        var code = "";
+        for (var i = 0; i < n; i++) {
+          var num = Math.floor(Math.random() * 62);
+          code += str[num];
+        }
+        return code;
+      }
+
+      console.log(getCode(5));
+    </script>
+  </body>
+</html>

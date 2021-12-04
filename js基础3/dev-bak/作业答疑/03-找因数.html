@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 找因数
+      // 统计因数的个数
+      var num = prompt("请输入一个数字");
+
+      // 遍历 1---num之间 所有的整数
+      var count = 0;
+      for (var i = 1; i <= num; i++) {
+        if (num % i === 0) {
+          console.log(i);
+          count++;
+        }
+      }
+      // 循环结束才能确定有几个
+      alert(count);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 函数
+      // 功能:封装用代码,实现代码的复用
+      // 创建函数
+      function foo() {}
+      var bar = function () {};
+      // 自执行函数
+      // 函数名的命名规范
+      // 创建时 函数括号里边 填写参数 ,,到底需要什么参数 就考虑调用时后的场景
+      // 返回值 return
+      // return 代表函数运行结束,下边的语句不再执行
+      // 一个函数 可以不写return ,
+      // return 后边也可以不跟返回值
+      // 以上两种情况 返回值 是 undefined
+      // return 语句 只有一个
+
+      // 学会封装函数
+
+      // 开发场景:
+      // 1,使用别人封装好的 函数(方法)
+      // 2. 需要让我们自己 把重复逻辑 进行封装
+
+      // 对象
+
+      // 对象是 用来封装信息的 key:value的集合
+      // 对象的基本操作
+
+      // 获取属性值
+      // 对象.属性名
+      // 修改 /添加
+      // 对象.属性名 = 属性值
+      // 删除
+      // delete 对象.属性名
+
+      // 对象的遍历
+      for (var key in obj) {
+        // key 值得就是 每一次循环时 的属性名
+        // 如果属性名 使用一个变量表示的,操作时 就需要用中括号的语法
+        console.log(obj[key]);
+      }
+      var user = {
+        age: 24,
+      };
+      var temp = "age";
+      user[temp];
+
+      // 补充
+
+      // agruments 对象  实参对象 只能在函数内使用 类数组形式(索引/长度/for循环遍历)不具备数组的方法
+
+      // 构造函数的知识
+      // 专门用于创建对象  new
+
+      // this的指向问题
+
+      // 1.  对象.方法() 调用一个函数时,,此时 里边的this  就指向  调用者 (.前边的对象)
+      // 2. 全局直接创建的函数
+      // function say() {}
+      // say() 这样调用的话 ,里边的 this 指向 window对象
+      // 3. 构造函数中,this  指向new 出来的实例对象
+    </script>
+  </body>
+</html>

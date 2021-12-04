@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 不同的数据类型 操作 不一样 
+        // 操作数据时,咱们要清楚的知道  类型是什么
+
+
+        // 利用 typeof  检测数据类型 
+        // 根据结果 判定出 是 何种数据 
+
+        // typeof 数据/变量
+        var msg = 'hello';
+
+        typeof msg; // 检测数据类型
+        // 查看结果 需要使用 console.log() 在控制台查看 
+        console.log(typeof msg); // string
+
+        console.log(typeof 123); // number
+        console.log(typeof true); // boolean
+        console.log(typeof undefined); // undefined
+
+        console.log(typeof null); // object
+
+        console.log(typeof [1,2,3]); // object
+
+        console.log(typeof {user:'张三'}); // object
+        function say(){
+            alert('hi')
+        }
+        console.log(typeof say); // function
+
+        
+
+        // typeof  无法 分辨出  null  object  和 数组 
+        // 数组 是一种特殊的对象
+        // null 纯粹是  bug 历史遗留问题
+
+
+        // 以后我们会学习  更精确的 办法  分辨 数组 和 对象
+
+
+        
+
+
+    </script>
+</body>
+
+</html>

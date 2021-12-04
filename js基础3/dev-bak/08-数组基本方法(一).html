@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 返回值 是 发明这个方法的人员 定义的
+      var userArr = ["张三", "李四", "王五"];
+
+      // push  在数组末尾追加一个元素
+      // 语法 数组.push(元素1,元素2,元素3,....)
+      // push 方法的返回值  是 添加完元素之后 新数组的长度
+
+      var temp = userArr.push("赵六", "小明"); // 1. 在数组后边加了两个元素,2. 把push()方法的 返回值 赋给了 temp 这个变量
+      console.log(userArr);
+      console.log(temp);
+
+      // unshift()  在数组前边添加一个元素
+      // 使用方式 同 push
+      // 返回值 也是 新数组的长度
+      userArr.unshift("小红");
+      console.log(userArr);
+
+      // pop 删除数组最后一个元素
+      // 返回值 :  删除掉的 那个元素
+      var temp1 = userArr.pop();
+      console.log(userArr);
+      console.log(temp1); // '小明'
+
+      // shift()  删除 数组最前边的元素(后边的元素要前移)
+      // 使用方式 同  pop
+      // 返回值: 删除掉的那个元素
+      userArr.shift();
+      console.log(userArr);
+
+      // 共同特征:  都修改了原数组
+    </script>
+  </body>
+</html>

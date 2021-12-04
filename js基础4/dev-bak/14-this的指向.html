@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // this 这个的意思, 表示一个指针,要去学习 各个情况下 ,this指向谁
+      var age = 40;
+      var user = {
+        name: "张三",
+        age: 24,
+        say: function () {
+          alert("我的年龄是" + this.age);
+        },
+      };
+      // obj.say(); // alert(this.age)===> obj.age
+      // user.say(); // alert(this.age)==>user.age (this指向 user)
+
+      // 绝大多数情况下  this指向调用者 (.前边的对象)
+
+      var foo = user.say; // 把 say函数 赋值给了  foo
+      foo(); // alert(this.age)===> 此时this 指向谁? 指向 window 对象(全局对象) ==>window.age
+      // 等价于
+      // window.foo()
+      // window 是一个 全局对象
+      // 我们声明的全局变量都会 作为 window 对象的一条属性 来保存
+      // 声明的全局方法(函数) 作为 window对象的 一条属性 保存
+
+      // 特殊情况:  在构造函数 中  this指向 new 出来的对象(实例对象)
+      console.log(window);
+    </script>
+  </body>
+</html>

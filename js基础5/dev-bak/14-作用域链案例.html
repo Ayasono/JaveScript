@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <script>
+      // 案例1 ： 结果是几？
+      function f1() {
+        var num = 123;
+
+        function f2() {
+          var num = 0;
+          console.log(num); // 站在目标出发，一层一层的往外查找
+        }
+        f2();
+      }
+      var num = 456;
+      f1();
+
+      // 案例2 ：结果是几？
+      var a = 1;
+
+      function fn1() {
+        var a = 2;
+        var b = "22";
+        fn2();
+
+        function fn2() {
+          var a = 3;
+          fn3();
+
+          function fn3() {
+            var a = 4;
+            console.log(a); //4
+            console.log(b); //
+          }
+        }
+      }
+      fn1();
+
+      // 案例3
+      var boy = 20,
+        girl = 18,
+        marry = 22;
+      function love(marry) {
+        // 指定形参 marry 就相当于 隐式声明了 var marry;
+        boy = 24; // 将全局变量boy 改成了 24
+        var girl = 22; // 局部变量,,全局使用不到
+        marry = 25; // 是将声明的形参marry 改成了 25
+        console.log(marry); // 25
+      }
+      love(22);
+
+      console.log(boy, girl, marry); // 24,18,22
+    </script>
+  </head>
+
+  <body></body>
+</html>

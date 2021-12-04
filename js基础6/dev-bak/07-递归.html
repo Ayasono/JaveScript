@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 求阶乘
+      // 递归
+      function jc(n) {
+        // 跳出条件
+        // if (n == 1) {
+        //   return 1;
+        // }
+        // return jc(n - 1) * n;
+
+        return n == 1 ? 1 : jc(n - 1) * n;
+      }
+
+      console.log(jc(4));
+
+      function jch(n) {
+        if (n == 1) {
+          return 1;
+        }
+        // n的阶乘和== n-1的阶乘和 + n的阶乘
+        return jch(n - 1) + jc(n);
+      }
+      console.log(jch(4));
+    </script>
+  </body>
+</html>

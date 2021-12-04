@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //  如何把一个字符串的大小写取反（ 大写变小写小写变大写）， 例如'AbC' 变成 'aBc' 。
+      var str = "AbC";
+
+      // str[0]只能获取 不能设置
+      // str[0] = 'w';  无效的
+
+      // 方法一 重新组建一个 符合要求的字符串
+      var temp = "";
+      for (var i = 0; i < str.length; i++) {
+        // str[i] 对于循环到的字符 判断大小写
+        var letter = str[i];
+        // 1.利用unicode 编码   大写 小写的 区间不一样
+        // 2.利用大小写转换
+        if (letter.toUpperCase() === letter) {
+          // 此时是大写,要转成小写
+          temp += letter.toLowerCase();
+        } else {
+          temp += letter.toUpperCase();
+        }
+      }
+      console.log(temp);
+
+      // 方法二  利用数组
+
+      var tempArr = str.split("");
+      console.log(tempArr);
+      for (var i = 0; i < tempArr.length; i++) {
+        if (tempArr[i].toUpperCase() == tempArr[i]) {
+          tempArr[i] = tempArr[i].toLowerCase();
+        } else {
+          tempArr[i] = tempArr[i].toUpperCase();
+        }
+      }
+      console.log(tempArr);
+      console.log(tempArr.join(""));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 每种数据类型 都有各自的使用方式
+      var a = "hello";
+      // a(); //  a is not a function 只有函数才能加 括号
+
+      // 所以说 操作数据时   心里要知道 他是什么类型,防止使用错误
+
+      // 可以通过 typeof  检测 变量数据类型
+      var num = 10;
+      var str = "hello";
+      var flag = true;
+      var b;
+      var c = null;
+      // 熟记 typeof 的检测结果 ,以便使用时 根据结果 就知道 是什么数据
+      console.log(typeof num); // number
+      console.log(typeof str); // string
+      console.log(typeof flag); // boolean
+      console.log(typeof b); // undefined
+      console.log(typeof c); // object  js 的历史 bug
+
+      var arr = [1, 2, 3];
+      var obj = {
+        age: 24,
+      };
+      function say() {}
+
+      console.log(typeof arr); // object  不准确 (数组是一种特殊的对象)
+      console.log(typeof obj); // object
+      console.log(typeof say); // function
+    </script>
+  </body>
+</html>

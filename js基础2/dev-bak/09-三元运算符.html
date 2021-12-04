@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 要根据某个条件 对一个变量进行赋值
+      var num = prompt("请输入加油升数");
+      var price;
+      // 三元运算符
+      // 条件表达式? 值1:值2
+      // 条件成立  返回值1 ,条件不成立 返回值2
+      price = num >= 20 ? 5.9 : 6;
+
+      // if (num >= 20) {
+      //   price = 5.9;
+      // } else {
+      //   price = 6;
+      // }
+
+      // 非常规的使用
+      var company = prompt("哪一个公司发明了js");
+      // 三元运算符
+      company == "网景" ? alert("回答正确!") : alert("回答错误!");
+      // if (company == "网景") {
+      //   alert("回答正确!");
+      // } else {
+      //   alert("回答错误!");
+      // }
+    </script>
+  </body>
+</html>

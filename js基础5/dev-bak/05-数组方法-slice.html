@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // `slice()`：从数组中提取指定的一个或者多个元素，返回结果为**新的数组**（不会改变原来的数组）。
+
+    // 备注：该方法不会改变原数组，而是将截取到的元素封装到一个新数组中返回。
+    // 截取数组
+    // 第一个参数表示开始索引,第二个参数表示结束索引 (但是不截取结束索引对应的元素)
+   var arr = ["a", "b", "c", "d", "e", "f"];
+
+  console.log(arr.slice(1,4))  // ["b", "c", "d"]
+  console.log(arr.slice(0)); // 第二个参数不写 默认截取到最后 (slice(0)实现了数组的复制)
+  console.log(arr.slice(4, 2)); //空
+  console.log(arr.slice(-2)); // 提取最后两个元素
+  </script>
+</body>
+</html>

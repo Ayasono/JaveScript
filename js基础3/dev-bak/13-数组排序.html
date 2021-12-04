@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var arr = [13, 8, 24, 35, 17, 9];
+
+      // 对这个数组 实现 从小到大的排序
+
+      // 冒泡排序 原理:
+      // 1. 比较相邻的元素。如果第一个比第二个大，就交换他们两个。(大的放后边)
+      // 2. 对每一对相邻元素作同样的工作，从开始第一对到结尾的最后一对。结束后，最后的元素应该会是最大的数。
+
+      // 遍历数组,拿到一个元素就找它相邻的下一个元素比较
+      // for (var i = 0; i < arr.length - 1; i++) {
+      //   // arr[i] 当前
+      //   // arr[i+1] 下一位
+      //   if (arr[i] > arr[i + 1]) {
+      //     // 交换位置
+      //     var temp = arr[i];
+      //     arr[i] = arr[i + 1];
+      //     arr[i + 1] = temp;
+      //   }
+      // }
+      // console.log("第一轮结束", arr); // 第一轮结束 只确定一个数的位置
+
+      // 其实 只需要让 第一轮的代码 重复的执行  arr.length-1 次 即可
+      for (var j = 1; j <= arr.length - 1; j++) {
+        // 外层循环 用于 控制 内层循环的 执行次数
+        // 保证 内层循环 执行  arr.length-1  次
+
+        // 内层循环 核心逻辑 ,用于 把 本轮最大的数 冒泡的 本轮的最后
+        // 为甚么 减 j
+        // 因为 没往后一轮 都会比上次 少比一次
+        // j==1  比到 arr.length-1
+        // j==2  比到 arr.length-1-1
+        // j==3  比到 arr.length-1-1-1
+
+        for (var i = 0; i < arr.length - j; i++) {
+          // arr[i] 当前
+          // arr[i+1] 下一位
+          if (arr[i] > arr[i + 1]) {
+            // 交换位置
+            var temp = arr[i];
+            arr[i] = arr[i + 1];
+            arr[i + 1] = temp;
+          }
+        }
+      }
+      console.log(arr);
+
+      // for (var i = 0; i < arr.length - 1; i++) {
+      //   // arr[i] 当前
+      //   // arr[i+1] 下一位
+      //   if (arr[i] > arr[i + 1]) {
+      //     // 交换位置
+      //     var temp = arr[i];
+      //     arr[i] = arr[i + 1];
+      //     arr[i + 1] = temp;
+      //   }
+      // }
+      // console.log("第二轮结束", arr);
+      // // 六个数 最坏的情况 需要比较五 轮
+      // for (var i = 0; i < arr.length - 1; i++) {
+      //   // arr[i] 当前
+      //   // arr[i+1] 下一位
+      //   if (arr[i] > arr[i + 1]) {
+      //     // 交换位置
+      //     var temp = arr[i];
+      //     arr[i] = arr[i + 1];
+      //     arr[i + 1] = temp;
+      //   }
+      // }
+      // console.log("第三轮结束", arr);
+      // for (var i = 0; i < arr.length - 1; i++) {
+      //   // arr[i] 当前
+      //   // arr[i+1] 下一位
+      //   if (arr[i] > arr[i + 1]) {
+      //     // 交换位置
+      //     var temp = arr[i];
+      //     arr[i] = arr[i + 1];
+      //     arr[i + 1] = temp;
+      //   }
+      // }
+      // console.log("第四轮结束", arr);
+      // for (var i = 0; i < arr.length - 1; i++) {
+      //   // arr[i] 当前
+      //   // arr[i+1] 下一位
+      //   if (arr[i] > arr[i + 1]) {
+      //     // 交换位置
+      //     var temp = arr[i];
+      //     arr[i] = arr[i + 1];
+      //     arr[i + 1] = temp;
+      //   }
+      // }
+      // console.log("第五轮结束", arr);
+    </script>
+  </body>
+</html>

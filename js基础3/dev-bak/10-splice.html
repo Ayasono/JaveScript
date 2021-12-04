@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // splice  可以删除 数组元素
+      // 第一个数代表 开始索引
+      // 第二个数代表删除几个
+      // splice() 修改原数组
+      // 返回值  删除元素组合的数组
+      var userArr = ["张三", "李四", "王五"];
+      var temp = userArr.splice(0, 2);
+      console.log(userArr);
+      console.log(temp); // ["张三",'李四']
+
+      // 补充 splice  还可以 有第三个参数,第四个参数....
+      // 后边的这些参数 表示 用于替换的元素
+
+      var arr = ["小明", "小红", "小张"];
+      arr.splice(1, 1, "张三", "王五");
+      console.log(arr);
+    </script>
+  </body>
+</html>

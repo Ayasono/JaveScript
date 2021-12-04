@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // +  -   *  /  ()   %(取余)
+
+        console.log(5 / 3); // 
+        console.log(5 % 3); // 求  5除以3 的 余数 2
+
+        // 一般情况下,参与算术运算的都是 数字类型 
+
+        // 如果有非数字参与 算术运算,就会将 非数字 隐式转换成数字类型 ,进行运算
+        console.log(true + 1); // 2
+        console.log('hello' * 10); // NaN*10 = NaN
+        // 有NaN 参与的运算  结果 还是 NaN 
+
+        // 特殊:  有字符串参与的加法运算 ,那么 会把另外一个隐式转换成 字符串,进行拼接 字符串
+        console.log('hello' + 100); // 'hello'+'100'==>'hello100'
+
+        console.log(5 + 'a' + 10); // '5a10'
+        console.log(5 + 10 + 'a'); //15+'a'==> '15a'
+    </script>
+</body>
+
+</html>

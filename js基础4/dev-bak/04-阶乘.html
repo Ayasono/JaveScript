@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function jc(n) {
+        var result = 1;
+        for (var i = 1; i <= n; i++) {
+          result *= i;
+        }
+        return result;
+      }
+      console.log(jc(4));
+
+      // 1!+2!+3!+...+n!
+      function jch(n) {
+        var sum = 0;
+        for (var i = 1; i <= n; i++) {
+          // 对 i 求阶乘
+          var result = 1;
+          for (var j = 1; j <= i; j++) {
+            result *= j;
+          }
+          sum += result;
+        }
+        return sum;
+      }
+
+      function myJch(n) {
+        var sum = 0;
+        for (var i = 1; i <= n; i++) {
+          sum = sum + jc(i);
+        }
+      }
+      console.log(jch(4));
+    </script>
+  </body>
+</html>

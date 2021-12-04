@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // forEach  可以用于实现数组的遍历 
+
+    // 经常用 for循环实现数组遍历
+    var arr= ['小明','小红','小张'];
+    // 数组名.forEach()
+    // 参数是一个函数
+
+    // 函数当做参数传递 ,这样的函数 叫做回调函数
+    // forEach 的回调函数中 有三个形参(名字随便起),但是第一个形参表示 遍历到的数组元素,第二个形参表示编导奥德数组元素的索引,第三个参数表示正在便利的数组
+    arr.forEach(function(item,index,array){
+      console.log('当前遍历元素',item);
+      console.log('当前遍历元素的下标',index);
+      console.log('当前遍历的数组',array);
+      // 这里边就书写 每次循环 要处理的逻辑
+    })
+  </script>
+</body>
+</html>

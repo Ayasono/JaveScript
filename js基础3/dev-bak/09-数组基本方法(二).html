@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // concat  连接 数组 (拼接数组)  不会改变原数组
+      // 拼接之后的数组 是当做返回值 提供给我们
+      var nameArr1 = ["张三", "李四"];
+      var nameArr2 = ["王五", "赵六"];
+      var result = nameArr1.concat(nameArr2);
+      console.log(nameArr1);
+      console.log(result); // ["张三", "李四", "王五", "赵六"]
+
+      // join  用于将 数组元素 拼接成字符串(把数组转成了字符串)
+      // 不改变原数组
+      // 转换成的字符串 也是当做 返回值 提供给我们
+      // () 里边 可以指定 连接符号
+      var arr = [1, 2, 3];
+      var temp = arr.join("");
+      console.log(arr);
+      console.log(temp); // '1,2,3' // '1-2-3'  // '1&2&3' // 123
+
+      // 字符串方法 split
+      // 用于将字符串 分割为一个 (数组元素都为字符串)的  数组
+      // 括号里边 填写 分隔符
+      // 数组会当做返回值 提供给我们
+      var email = "abc@163.com;cc@126.com;frg@qq.com";
+      var emailArr = email.split(";");
+      console.log(emailArr); // ["abc@163.com", "cc@126.com", "frg@qq.com"]
+    </script>
+  </body>
+</html>

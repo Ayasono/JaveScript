@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- js当中 有大量现成的 对象 ,编写少量的程序 即可 完成功能  -->
+
+    <script>
+      // Math  就是一个 内置对象
+      // 它身上 带有 很多数学方法
+      // 比如 求 绝对值  求三角函数的方法
+
+      // Math.abs()  用于 求 括号里边数据的绝对值
+
+      console.log(Math.abs(-100));
+      var a = Math.abs(-10); // 结果 赋给了 a
+      console.log(a);
+
+      // Math.floor()  向下取整(往小取)
+      console.log(Math.floor(2.4)); // 2
+      console.log(Math.floor(2.5)); // 2
+      console.log(Math.floor(-2.4)); // -3
+      console.log(Math.floor(-2.5)); // -3
+
+      // Math.ceil()  向上取整(往大取)
+      console.log(Math.ceil(20.1)); // 21
+      console.log(Math.ceil(20.7)); // 21
+      console.log(Math.ceil(-20.1)); // -20
+      console.log(Math.ceil(-20.7)); // -20
+
+      // 求一组数中 的 最大值 和 最小值
+
+      console.log(Math.max(12, 9, 56)); // 56
+
+      console.log(Math.min(10, -19, 23, 45)); // -19
+
+      // Math.pow(x,y) 用来求 x的y次方
+
+      console.log(Math.pow(2, 8)); // 256
+      console.log(Math.pow(4, 5)); // 1024
+
+      // Math.sqrt()  对一个数 进行开方  根号几
+
+      console.log(Math.sqrt(4)); // 2
+      console.log(Math.sqrt(3)); // 2
+
+      // Math.round()  对一个数 四舍五入 到 整数
+      // 负数 四舍五入(-1)  但是特殊  4.5会被当做  4.499999999999999...  所以此时会被舍去
+      console.log(Math.round(24.56)); //25
+      console.log(Math.round(24.16)); //24
+      console.log(Math.round(-24.16)); // -24
+      console.log(Math.round(-24.46)); // -24
+      console.log(Math.round(-24.56)); // -25
+      console.log(Math.round(-24.5)); // -24 为什么舍去了?
+      // 因为
+      console.log(-24.5==-24.4999999999999999999999999999); // true
+      console.log(Math.round(-24.6)); // -25
+
+      // js 计算小数  不精确
+
+      console.log(2.4999 === 2.5); // false
+      console.log(2.499999999999999999999999999 === 2.5);
+      console.log(0.1 + 0.2 === 0.3); // false
+
+      // Math.random()  随机数   [0,1) 前闭后开区间
+      console.log(Math.random());
+
+      // 写一个算表达式 随机 [0,5]之间的所有整数
+      // 0,1,2,3,4,5  概率一样
+      // Math.random()*5  ===>  [0,5)
+      // 0.几  1.几  2.几 3.几  4.几
+
+      console.log(Math.floor(Math.random() * 6));
+
+      // 写一个算表达式 随机 [5,10]之间的所有整数
+      // [0,5] + 5 ===>[5,10]
+      console.log(Math.floor(Math.random() * 6) + 5);
+
+      // 写一个算表达式 随机 [3,7]之间的所有整数
+      // [0,4]+3==> [3,7]
+
+      console.log(Math.floor(Math.random() * 5) + 3);
+
+      // 写一个算表达式 随机 [1,22]之间的所有整数
+      // [0,21]+1
+      console.log(Math.floor(Math.random() * 22) + 1);
+
+      // 随机 [m,n]之间的 所有整数   m,n 都是整数
+
+      // Math.floor(Math.random()*个数)+最小值
+      // Math.floor(Math.random()*(n-m+1))+m
+
+      // 补充 :
+      // 括号里  是  弧度  2分之pi(90度)
+      // Math.PI  ===>  圆周率
+      console.log(Math.sin(Math.PI / 6));
+      console.log(Math.sin(Math.PI / 3));
+    </script>
+  </body>
+</html>

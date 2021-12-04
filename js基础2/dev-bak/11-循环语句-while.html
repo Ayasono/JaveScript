@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // while循环 :  当符合条件时  就执行
+      // 直到 条件不符合时 ,循环才会结束
+      // while(条件表达式){
+      //   执行的代码
+      // //循环体
+      // }
+
+      // 以下代码 这个 hello  会一直打印
+      // 死循环 不能写出这样的代码
+      // 所以循环 一定要有跳出条件
+
+      // while 后边的括号  也具备隐式转换的能力
+      // while (1 > 0) {
+      //   console.log("hello");
+      // }
+
+      // 控制台 输出 100次 1 如何实现
+      var n = 1;
+      while (n <= 100) {
+        console.log(1);
+        n++;
+      }
+
+      // 控制台输出 1--100之间的每个整数
+      // var n = 1;
+      // while (n <= 100) {
+      //   console.log(n);
+      //   n++;
+      // }
+
+      // 总结:  while: 条件判断==> 真==>执行代码块==> 再次进行条件判断==>真==>再一次进行判断===> 直到 遇到 false  循环结束
+
+      // do..while
+      // 先执行后判断 ==> 如果是真 ==>执行=>>判断==>真==>执行===> 直到遇到 false 就结束
+      // do{
+
+      // }while()
+
+      var m = 1;
+      do {
+        console.log(m);
+        m++;
+      } while (m <= 100);
+
+      // 区别就是  do..while()  至少执行一次
+    </script>
+  </body>
+</html>

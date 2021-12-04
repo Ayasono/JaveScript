@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- 三门语言当中 注释的形式 不同 ,但是 生成方式 一样  ctrl + /  -->
+
+    <!-- 第一种引入方式 ,就是 直接内部书写   -->
+    <!-- 第二种方式 ,就是 引入 外部的js 文件,作用于该网页  -->
+    <style>
+
+        /* css */
+    </style>
+    <!-- 第一个位置  -->
+    <script>
+        // js代码
+        // 让网页弹出警告框,显示括号里边的内容
+        alert('hello');
+    </script>
+
+    <script src="util.js"></script>
+</head>
+<body>
+    <!-- 代码从上往下执行  -->
+    
+    <!-- 第二个位置: body 里边的 所有标签之后  -->
+    <script>
+        // js代码
+        alert('world')
+    </script>
+    <script src="util.js"></script>
+
+    <!-- 注意点 ,添加 src 属性的 script 标签 里边 就不要写代码了 -->
+</body>
+</html>

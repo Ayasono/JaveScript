@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 作用域链 值得就是 作用域的上下级包含关系
+
+      // 掌握变量 查找的规则 :
+      // 先在自身作用域下查找,如果找不到,就到自己的上一级作用域查找,一层层向上,直到找到为止,如果一直找到全局作用域也没有,肯定会报错
+      // 这个过程 不会向 兄弟作用域查找
+
+      // 分析作用域
+      // 1.全局作用域下 创建了函数foo
+      // 2. foo函数作用域
+      // 3. bar函数 和  ins 函数 作用域
+      var y = 10;
+      var x = 200;
+      function foo() {
+        var x = 1; // foo函数内部创建 局部变量,只能在 foo函数里边去用
+
+        function bar() {
+          var y = x + 1; // 把x+1的值 赋给创建的 y(bar函数的局部变量)  x代表谁?
+          // 找x 找到了foo函数有x=1
+          console.log(y);
+          var z = 100; // 局部变量
+        }
+
+        var z = y + 1; // 将y+1的值赋给创建的变量z   y代表谁呢
+        // 找y 的过程: 现在自身作用域下查找,如果找不到,就到上一级作用域查找,找到就使用,如果找到全局都找不到,直接报错
+
+        function ins() {
+          x++; // 找x ?  foo函数下 有 x
+          y++; // 找y
+          var z = 1000;
+        }
+
+        bar();
+        ins();
+      }
+
+      foo();
+      console.log(y); //11 ins函数里边 有队 全局的y进行修改
+      console.log(x); // 200
+    </script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 中括号语法
+      // [索引]
+      var userArr = ["张三", "李四", "王五"];
+
+      // 如何获取元素
+      var user1 = userArr[1];
+      var user2 = userArr[0];
+
+      console.log(user1, user2);
+
+      // 如何修改元素
+      userArr[2] = "小红"; // 将索引为2 位置 改成了 小红
+      console.log(userArr);
+
+      // 添加一个元素
+      userArr[3] = "小明";
+      console.log(userArr);
+
+      // 删除一个元素
+      // userArr[0] = null; // 这不叫删除
+      // console.log(userArr);
+
+      // 需要借助数组的 splice 方法
+      // 第一个数 代表开始删除的位置(索引)
+      // 第二个数 代表 删除几个元素
+      userArr.splice(0, 1);
+      console.log(userArr);
+    </script>
+  </body>
+</html>

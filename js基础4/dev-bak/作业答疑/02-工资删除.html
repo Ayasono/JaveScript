@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 工资的数组[1500,1200,2000,2100,2100,1800],把工资超过2000的删除
+      var arr = [1500, 1200, 2000, 2100, 2100, 1800];
+
+      // 思路一
+      // for (var i = 0; i < arr.length; i++) {
+      //   if (arr[i] > 2000) {
+      //     // 删除元素
+      //     arr.splice(i, 1);
+      //     i--;
+      //   }
+      // }
+      // console.log(arr);
+
+      // 思路二
+      var result = [];
+      for (var i = 0; i < arr.length; i++) {
+        if (arr[i] <= 2000) {
+          result.push(arr[i]);
+        }
+      }
+      console.log(result);
+    </script>
+  </body>
+</html>

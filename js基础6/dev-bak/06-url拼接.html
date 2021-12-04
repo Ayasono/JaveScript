@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 编写函数 把对象{name:'bf',age:24,from:'baidu'}
+      // 拼接成以上字符串 "http://www.xxx.com/?name=bf&age=23&from=baidu"
+
+      var params = { name: "bf", age: 24, from: "baidu" };
+      var url = "http://www.xxx.com/";
+
+      // 开始拼接
+      url += "?";
+      // 对象的循环遍历
+      for (var key in params) {
+        var k = key;
+        var v = params[key];
+        // 拼接 'k=v&'
+        url += k + "=" + v + "&";
+      }
+      console.log(url.slice(0, url.length - 1));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // =  是 赋值运算符
+      // 把 =  号右边的数据  赋值 给左边的变量
+
+      var a = 10;
+      a = 20;
+      a = 10 + 20;
+      console.log(a); // 30
+
+      // =  具备 修改变量 保存的数据的作用
+
+      var b = 30;
+      // 想让 b 变成 '30'
+      b = "30";
+      console.log(b);
+
+      // += 符号
+      // -=
+      // *=
+      var c = 100;
+      // c = c + 5; // 把右边 c+5 的结果 赋值给  左边 c
+      // 简写成
+      c += 5;
+      console.log(c);
+
+      // 如果是 c+=1
+      // 还可以简写
+      c++;
+      // ++c;
+      console.log(c);
+
+      // c++  还是 ++c  都实现了 变量c  的 自增1
+
+      // 对于减法   有 c-- 和 --c
+      // 总结: 相同点 都可以实现 c的 自增1
+
+      // 不同点:
+      // 当我们 把这个 运算表达式 用一个变量来接收的时候,就体现出 区别了
+      var m = 10;
+      var n = m++; // 把m++ 的值 赋给 n
+      console.log(m); // 11
+      console.log(n); // 10
+
+      var x = 10;
+      var y = ++x; // 把 ++x 的值 赋给 y
+      console.log(x); // 11
+      console.log(y); // 11
+    </script>
+  </body>
+</html>

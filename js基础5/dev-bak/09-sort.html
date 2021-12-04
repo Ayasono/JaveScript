@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // sort  用于实现 数组的排序
+      var arr1 = ["e", "b", "d", "a", "f", "c"];
+      // 如果是字符串数组排序时,是按照字典序(unicode编码大小)排序  (从小到大)
+      // 情况一: 使用sort 不带参数时,,
+      // 会把数组 里边的元素当做字符串对待,  按照字符串字典序排序 ,字符串是一位一位比
+      arr1.sort();
+      console.log(arr1); //["a", "b", "c", "d", "e", "f"]
+
+      var arr2 = [5, 2, 11, 3, 4, 1];
+      arr2.sort();
+      console.log(arr2); // [1, 11, 2, 3, 4, 5]
+
+      // 所以想实现真正排序时  ,必须带参数
+      var arr3 = [5, 2, 11, 3, 4, 1];
+      // 使用sort时,要传一个函数作为参数
+      // 这个函数里 指定两个形参 a,b ,代表数组当中的任意两个元素(前边/后边)
+      // 记好这个使用形式
+
+      // 这个回调函数 是用来指定排序规则
+      // 会根据回调函数的返回值 决定 a,b 两个元素的顺序(是否交换位置)
+      // 返回值<=0 不交换a,b位置
+      // 返回值>0  交换a,b位置
+      arr3.sort(function (a, b) {
+        return a - b; // 实现小到大的排序  //[1, 2, 3, 4, 5, 11]
+        // return b-a; // 实现大到小的排序  [11, 5, 4, 3, 2, 1]
+      });
+      console.log(arr3);
+
+      var list = [
+        {
+          date: "2021-04-30",
+          duration: 120,
+          tags: "剧情,悬疑,动作",
+          poster:
+            "https://p0.meituan.net/160.240/movie/3ad18f011110130e927d50046fde86f71038961.jpg",
+          director: "张艺谋",
+          actor: "张译,于和伟,秦海璐",
+          showCount: 1338282,
+          cinemaCount: 9650,
+          slogan: "",
+          name: "悬崖之上",
+          id: 1298367,
+        },
+        {
+          date: "2021-04-30",
+          duration: 115,
+          tags: "爱情,剧情",
+          poster:
+            "https://p1.meituan.net/160.240/movie/5778f9b9f2909ba55eb99bec059cb5d22333886.jpg",
+          director: "韩天",
+          actor: "许光汉,章若楠,丁冠森",
+          showCount: 1223435,
+          cinemaCount: 9604,
+          slogan: "",
+          name: "你的婚礼",
+          id: 1320283,
+        },
+        {
+          date: "2021-05-01",
+          duration: 111,
+          tags: "犯罪,剧情,动作",
+          poster:
+            "https://p0.meituan.net/160.240/moviemachine/3084e88f63eef2c6a0df576153a3fad0327782.jpg",
+          director: "吕聿来",
+          actor: "姜武,张颂文,金世佳",
+          showCount: 730860,
+          cinemaCount: 9586,
+          slogan: "",
+          name: "扫黑·决战",
+          id: 1346626,
+        },
+        {
+          date: "2021-05-01",
+          duration: 111,
+          tags: "悬疑,犯罪,剧情",
+          poster:
+            "https://p1.meituan.net/160.240/movie/a81eee7d4103deaf238cf93fcffd215c171907.jpg",
+          director: "陈正道",
+          actor: "郭富城,段奕宏,张子枫",
+          showCount: 615331,
+          cinemaCount: 9650,
+          slogan: "",
+          name: "秘密访客",
+          id: 1241385,
+        },
+      ];
+
+      // 按照电影的播放时长 进行 从低往高得排序
+      // 时长一样,就按照showCount 的值从小到大排序
+      // a,b代表数组当中的元素
+
+      list.sort(function (a, b) {
+        if (a.duration == b.duration) {
+          return a.showCount - b.showCount;
+        }
+        return a.duration - b.duration;
+      });
+      console.log(list);
+    </script>
+  </body>
+</html>

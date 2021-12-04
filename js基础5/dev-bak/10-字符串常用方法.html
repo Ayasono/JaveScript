@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // 共同特征 以下方法 都无法改变 原始字符串,,得到的结果都是作为方法的返回值 提供给我们
+// **`charAt()`** 获取相应位置的字符
+// **`charCodeAt()`** 指定位置字符 的 Unicode 编码
+// **`indexOf()`** 返回字符在字符串中的位置
+// **`lastIndexOf()`**
+// **`concat()`** 连接字符串  不改变原始字符串
+// **`slice()`** 提取字符串的某个部分
+// **`substr()`** 截取字符串
+// **`toUpperCase()`** 转成大写
+// **`toLowerCase()`**  转成小写
+
+var str = "how are you? and you?";
+// 字符串也有索引,从0开始
+// 通过索引 可以获取字符串中的 某一个字符,但是 无法 修改
+console.log(str[2]); // 'w'
+// str[2] = 'z'; // 不能修改 没用
+console.log(str);
+
+console.log(str.charAt(2)); //'w' 指定索引的 字符 
+console.log(str.charCodeAt(2));  // 119  w对应的 unicode编码
+
+console.log(str.indexOf('y')); // 8
+console.log(str.lastIndexOf('y')); // 17
+var email = '123@163.com';
+
+console.log(str.concat(email)); // 'how are you? and you?123@163.com'
+
+console.log(str.slice(1,5)); // 'ow a'
+// console.log(str.slice(0)); // 
+
+// substr() 截取字符串 第一个参数表示 开始索引,,,第二个参数 表示 截取 数量
+console.log(str.substr(1,5)); // 'ow ar'  从1 开始 数 5个字符
+
+
+console.log(str.toUpperCase()); // HOW ARE YOU? AND YOU?
+
+
+
+  </script>
+</body>
+</html>

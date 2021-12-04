@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var str = "hello";
+      var flag = true;
+      var a;
+      var c = null;
+
+      // 转成数字
+
+      // 利用 Number()  可以将括号里啊逼的数据 转换成  数字类型
+      // 隐式转换适用规则
+
+      console.log(Number(str)); // NaN
+      console.log(Number(flag)); // 1
+      console.log(Number(false)); // 0
+      console.log(Number(a)); // NaN
+      console.log(Number(c)); // 0
+
+      // 特殊字符串
+      console.log(Number("100")); // 100
+      // 只有纯数字的字符串 能够正常转成 数字 ,,其余都是NaN
+      console.log(Number("")); // 0 空字符串
+      console.log(Number("    ")); // 0  全是空格的字符串
+    </script>
+  </body>
+</html>

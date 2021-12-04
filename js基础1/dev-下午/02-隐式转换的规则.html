@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 基本数据之间 
+
+        var flag = true;
+        var num = 241;
+        var a;
+        var c = null;
+
+        // 其他数据转成字符串  的规则  
+        // 就是 在数据前后 加上了 引号 
+        // 隐式转换成字符串的时候 采用的 就是 String() 一样的规则
+        console.log(String(flag)); // 'true'
+        console.log(String(num)); // '241'
+        console.log(String(a)); // 'undefined'
+        console.log(String(c)); // 'null'
+
+
+        // 其他数据转成 数字  的规则 
+        // 隐式转换成数字的时候 采用的 就是 Number() 一样的规则
+        console.log(Number(flag)); // 1
+        console.log(Number(false)); // 0
+        console.log(Number(undefined)); // NaN
+        console.log(Number(null)); // 0
+        // 纯数字 的字符串,正常的转成数字
+        console.log(Number('120')); // 120
+        // 含有非数字字符,就会被转成NaN
+        console.log(Number('hello120')); // NaN
+        // 特殊的 
+        console.log(Number('      ')); // 0
+        console.log(Number('')); // 0
+
+
+        // 其他数据 转成 布尔值的规则  
+        // 隐式转换成布尔值的时候 采用的 就是 Boolean() 一样的规则
+        // 只有五种 情况 会被转成  false ,其余所有情况都是 true  
+
+        // 0  NaN  undefined  null  '' 
+
+        
+        // 除了 记住 以上的 规则  
+        // 还要去学习  判断 转换的方向
+
+    </script>
+</body>
+</html>

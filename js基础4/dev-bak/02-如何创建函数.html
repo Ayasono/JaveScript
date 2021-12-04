@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 第一种方式
+      // 通过 function 关键字 创建具名函数
+      // function 函数名(参数){
+      //   封装(保存)的代码
+      // }
+      function sayHello() {
+        alert("hello");
+      }
+      // 使用函数/调用函数  函数()
+      // 函数要想运行 必须有 调用语句  // 不调用函数是不会执行的
+      sayHello();
+
+      // 第二种方式
+      // 匿名函数表达式
+      // 相当于 把创建的一个匿名函数 赋值给了  sayHi这个变量
+      // 想使用函数时,就可以 通过sayHi  来使用了
+      var sayHi = function () {
+        alert("hi");
+      };
+
+      sayHi();
+    </script>
+  </body>
+</html>

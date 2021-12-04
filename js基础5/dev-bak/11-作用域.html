@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      var b = 200;
+    </script>
+  </head>
+  <body>
+    <script>
+      // 作用域:  变量的作用范围
+      // 全局作用域: 所有script标签 ,一个页面有一个全局作用域
+      console.log(b);
+      // 函数作用域: 一个函数体 内部
+
+      // 全局变量 :全局作用域下声明的变量
+      // 局部变量: 函数体内部声明的变量
+      var a = 100; // 这个变量是在 script标签下(全局作用域)创建的,所以是一个全局变量,全局变量在整个 script 标签内部(全局下)都可以使用
+      function add(x, y) {
+        // 这个变量是在函数体内部声明的  ,所以说只能在该函数内部使用
+        var sum = 0;
+        sum = x + y;
+        console.log(a); // 这个a 会找到全局变量a
+      }
+      add(3, 5);
+      function foo() {
+        function say() {}
+      }
+
+      // 作用域的上下级关系
+      // 全局作用域  foo函数作用域  say 函数作用域  互相包含
+      // 他们三者之间 有上下级关系
+
+      // say的上一级作用域 是 foo ,foo的上一级作用域 是 全局
+    </script>
+  </body>
+</html>

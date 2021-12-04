@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- **题目**：假如投资的年利率为 5%，试求从 1000 块增长到 5000 块，需要花费多少年？ -->
+
+    <script>
+      var money = 1000;
+      // 每过一年  money*1.05  如何转换成代码
+      // 还需要借助一个变量 记录 过了多少年 count
+      // 循环体每执行一次,就代表着过了一年
+      var count = 0;
+      while (money < 5000) {
+        money = money * 1.05;
+        count++;
+      }
+      console.log("经过了" + count + "年");
+
+      // 作业:
+      // 猜数字游戏
+      // 随机生成一个数字 ,让用户猜 数字 是几? 猜错时 给提示 :  大了 还是 小了 ,直到正确位置
+      // 1.随机生成一个1~10 的整数  我们需要用到 Math.random() 方法。
+      // 2.需要一直猜到正确为止，所以需要一直循环。
+      // 3.while 循环
+      // 4.核心算法：使用 if  else if 多分支语句来判断大于、小于、等于。
+    </script>
+  </body>
+</html>

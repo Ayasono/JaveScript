@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var num = 100;
+      var flag = true;
+      var a;
+      var c = null;
+
+      // 以上数据转成字符串的时候 是什么规律
+
+      // 方式一:
+      // 利用 String() 可以将括号里边的 数据 转换成 字符串类型
+      // 隐式转换的规则   和 string() 规律一样
+
+      // 就是在 数据两侧 加上了引号
+      console.log(String(num)); // '100'
+      console.log(String(flag)); // 'true'
+      console.log(String(a)); //'undefined'
+      console.log(String(c)); // 'null'
+
+      // 方式二
+      // 利用 数据.tostring()  也可以实现转成 字符串类型
+      console.log(num.toString()); //'100'
+      console.log(flag.toString()); // 'true'
+
+      // 注意  对于 null  undefined  而言 无法使用 toString()
+      // console.log(a.toString());
+      // console.log(c.toString());
+    </script>
+  </body>
+</html>

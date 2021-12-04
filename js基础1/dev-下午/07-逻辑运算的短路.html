@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 逻辑运算  存在 短路  
+
+        // 明确: 参与逻辑运算的  可以是  任意数据/变量 , 任意运算,任意的表达式,任意的语句 
+
+
+        // 与运算的短路:  遇到false 就短路/停止
+        0 && alert('hello');
+
+        // 或运算的短路:  遇到 true 就短路/停止
+        5 || alert('hi');
+
+
+
+
+        // 逻辑运算的结果 
+        // 必然是 参与逻辑运算的 某个条件
+
+        // 在哪里(哪个条件)短路/停止,这个条件的结果 就是 整个逻辑运算的结果
+        // 如果没有发生短路,走到了最后一个条件,那么最后的条件 就是结果
+
+
+
+        console.log(5 || 6 || 7); // 5
+        console.log(5 + 3 || 6 - 5 || 7); // 5+3==>8
+
+        console.log(5 && 0 && 7); // 0
+        console.log(5 && 6 && 7); // 7
+
+
+    </script>
+</body>
+
+</html>

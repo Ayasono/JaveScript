@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var type = prompt("请输入汽油编号92或者97");
+      var num = prompt("请输入加油升数");
+
+      console.log(type, num); // prompt 录入的信息 都是字符串类型
+
+      if (type == 92) {
+        if (num >= 20) {
+          alert(num * 5.9);
+        } else {
+          alert(num * 6);
+        }
+      } else if (type == 97) {
+        if (num >= 30) {
+          alert(num * 6.95);
+        } else {
+          alert(num * 7);
+        }
+      } else {
+        alert("汽油编号有误");
+      }
+    </script>
+  </body>
+</html>

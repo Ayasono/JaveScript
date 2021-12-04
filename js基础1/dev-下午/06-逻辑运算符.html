@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // 与或非 
+        // 与/且运算  &&  表达多个条件必须同时满足时 ,就使用 &&
+        // 或运算  ||   表达的是  只要满足 其中一个条件 就行  ,就使用或运算
+        // 非运算   !
+
+
+        // 考驾照的条件  年龄>18  年龄<60 
+        // 上述条件 需要同时满足 
+        // 使用 与运算  && 
+
+        var age = prompt('请输入你的年龄');
+        // 注意 prompt 录入的数据 都是 字符串 
+        console.log(age); //'24'
+
+        console.log(age > 18 && age < 60)
+
+        // 条件1 || 条件2
+
+
+        // 非运算  ! 
+        // 对一个布尔值 取反 
+        var flag = true;
+        console.log(!flag);// false
+
+        // 如果不是布尔值 ,会隐式转换成布尔值 取反得到结果 
+        console.log(!10); // !true==> false
+        console.log(!0); // !false ==> true
+
+    </script>
+</body>
+
+</html>

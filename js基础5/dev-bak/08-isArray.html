@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    // typeof 检测数据类型  不准确
+    //  typeof 检测数组 返回的 却是  object 
+
+    // Array.isArray(数组) // 拍断括号里边的数据到底是不是 数组类型
+    // true  /false 
+
+    // 非常准确的判断是不是 数组 
+    console.log(Array.isArray('1')); // false
+    console.log(Array.isArray([1,2])); // true
+    console.log(Array.isArray({name:'zhangsan'})); // false
+
+
+
+  </script> 
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 封装一个函数:  实现对任意两个数求和
+      // 参数的作用 主要就是用于 接收  调用函数时  传进来的数据
+      // 起到了 函数和 外界 沟通的作用
+      function add(x, y) {
+        // 对传入的两个数求和
+        // 就需要有相应的 变量 接收 传入的数据  (函数的参数)
+        console.log(x + y);
+      }
+      add(3, 5); // 调用时 需要 告诉函数 求哪两个数的和
+      add(4, 6);
+
+      // 参数:
+      // 形参: 形式上的参数,用来给实参 占位的 (创建函数时括号里边的的变量 x,y)
+      // 实参:  实际参与 运算的数据 ,(调用时传入的真实数据)
+
+      // 传入的实参 ,比预先设置的形参 数量多
+      // 多余的实参,没有形参接收,那么 就无法参与运算
+      add(3, 5, 7);
+
+      // 传入的实参比 预先设置的形参 少
+      // 多余的形参,就不会被赋值,那么他的值默认 是 undefined
+      add(6);
+
+      // 一般情况  函数的  形参 和 实参 都会保持一致
+    </script>
+  </body>
+</html>

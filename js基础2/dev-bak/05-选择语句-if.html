@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+
+    // 适用场景 :  某些程序逻辑  需要 符合  特定条件时 才能执行 
+    // 语法:
+    // if(条件判断){
+    //   要执行的代码
+    // }
+
+    // 如果括号里边的 条件判断 是正确的, 那么 就会执行花括号里边的代码
+    // var year = prompt('请输入一个年份')
+    // 如果 year  === 2021  就执行 打印 hello  
+    // if(year==='2021'){
+    //   console.log('hello');
+    // }
+    // `if(...)` 语句计算括号里的条件表达式，如果计算结果是 `true`，就会执行对应的代码块。
+    var age = prompt('请输入你的年龄');
+
+    if(age>18&&age<60){
+      alert('通过了')
+    }
+
+
+    // if后边的 括号 具备隐式转换的功能
+    // 括号里的结果如果不是布尔值,会隐式转换成布尔值,然后决定 代码块 是否运行
+    if(1){
+      console.log('运行了');
+    }
+    if(0){
+      console.log('不会运行');
+    }
+  </script>
+</body>
+</html>

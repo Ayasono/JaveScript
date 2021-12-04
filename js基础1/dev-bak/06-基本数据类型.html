@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Number
+      // 数字类型 整数 和  浮点数(小数)
+      // 常规数字  100 ,200,-100,0
+      // 进行数学运算
+
+      // 特殊数字
+      // Infinity  无穷大  如果超出了 js  数字的最大范围  那么 就是 infinity
+      // -Infinity 无穷小
+
+      // NaN (not a number)   计算不出来结果时 ,会显示 NaN
+      // 比如
+      console.log(100 - "不凡"); // NaN
+      // NaN 参与的运算 结果 都是 NaN
+
+      console.log(100 / 0);
+
+      // js中的 小数 运算 不精确
+
+      console.log(0.1 + 0.2); // 0.30000000000000004
+
+      // String 字符串
+      // 1. 特征 带引号 的就是  字符串类型
+      // 2. 单双引号都可以 ``也可以
+      console.log("hello");
+      console.log(`你好`);
+
+      // 单双引号 是可以嵌套 ,但是 同类引号不能嵌套
+      console.log('张三说:"你好"');
+
+      // Boolean类型  布尔类型
+      // 布尔类型只有两个值 : true(真/正确/符合条件) 和 false (错误/假,不符合)
+      var flag = true;
+      var b = false;
+      console.log(flag);
+      console.log(b);
+
+      // undefined 类型
+      // 只有一个值  undefined   (未定义)
+      // 当一个变量 只声明,但是没有赋值的时候 ,他的值 是 undefined
+      var a;
+      console.log(a); // undefined
+
+      // null类型
+      // 只有一个值 null   表示 空
+      var user = null;
+      console.log(user);
+    </script>
+  </body>
+</html>

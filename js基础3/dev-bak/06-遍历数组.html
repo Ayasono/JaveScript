@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // for循环最常用于 遍历 数组
+      // 就是 把数组当中的每一个元素 过 一遍
+      // 其实就是 遍历数组的索引
+      var arr = ["张三", "john", "李四", "王五"];
+
+      for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+      }
+
+      // 2. for...of 遍历数组元素
+      var fruits = ["Apple", "Orange", "Plum"];
+
+      // for(var 变量 of 数组名){
+      //   console.log(变量); // 这个变量就是 数组当中的当前正在遍历的元素
+      // }
+
+      for (var fruit of fruits) {
+        alert(fruit);
+      }
+      // `for..of` 不能获取当前元素的索引，只是获取元素值，但大多数情况是够用的。
+    </script>
+  </body>
+</html>

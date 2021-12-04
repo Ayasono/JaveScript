@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var user = {
+        name: "张三",
+        age: 24,
+        like: ["篮球", "足球"],
+        sex: "男",
+      };
+
+      // 遍历对象  就是 把 对象中的 每个属性 循环一遍
+      // for ... in  用于遍历对象
+      for (var key in user) {
+        // key这个变量 就是 循环到的这个对象当中的 每一个属性名
+        console.log(key);
+        // 通过 key 获取对应的属性值
+        // console.log(user.key); // . 语法只会把后边的 当做字符串对待
+        console.log(user[key]); // []会把key这个当做变量对待,将其代表的数据解析出来
+      }
+    </script>
+  </body>
+</html>

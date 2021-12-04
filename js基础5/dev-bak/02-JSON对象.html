@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 学习 JSON对象 提供的两个方法
+      // 可以实现 对象与字符串(JSON格式的字符串)之间的互相转换
+
+      // 网络间传输 是 字符串形式
+      // 所以需要将 对象转换为字符串 才能传输
+
+      // JSON格式 是一个字符串
+      var user = {
+        name: "john",
+        sex: "男",
+        isAdmin: false,
+        child: null,
+      };
+      // 把user 转换为 JSON格式的字符串 进行传输
+      // '{"name": "john","sex": "男","isAdmin": false,"child": null,}'; // 这是一个 符合JSON格式的字符串
+      //'{name: "john",sex: "男",isAdmin: false,child: null,}'; // 这只是一个 普通字符串
+      // JSON.stringify() 可以实现将一个对象 转换为 JSON格式的字符串
+      var jsonStr = JSON.stringify(user);
+      console.log(jsonStr); // '{"name":"john","sex":"男","isAdmin":false,"child":null}'
+
+      // JSON.parse() 可以将一个JSON格式的字符串 转换成 对象
+      // 普通字符串 无法转换成对象
+
+      var jsonObj = JSON.parse(jsonStr);
+      console.log(jsonObj);
+      console.log(jsonObj.name); // john
+
+      // https://ticket.nexttix.net/api/movies
+    </script>
+  </body>
+</html>

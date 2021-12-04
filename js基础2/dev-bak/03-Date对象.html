@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // Date 对象 一个  构造 时间信息对象的 的  模板(构造函数对象)
+
+      // 可以创建出 一个 描述了某个时间点(过去,未来,当前)信息的对象
+
+      // new
+
+      var nowDate = new Date(); // 为我们构建了 一个  保存了当前时间(这句代码运行时)信息 的对象
+      console.log(nowDate);
+
+      // 构建过去某个时间的 时间信息对象
+      // 需要传递一个日期字符串
+      var date1 = new Date("2020-01-01 9:13:00"); // 默认8点
+      console.log(date1);
+
+      // 推荐的日期字符串格式
+      var date2 = new Date("2020/9/1"); // 默认0点
+      console.log(date2);
+
+      var date3 = new Date("2022/9/1"); // 默认0点
+      console.log(date3);
+
+      // 构建出来的 这个时间信息 对象  身上 有很多的方法 ,可以帮助我们 提取出 年月日 时分秒 毫秒 相关的信息
+
+      // 取出 nowDate 里边的  时间信息
+
+      var year = nowDate.getFullYear();
+      var month = nowDate.getMonth()+1; // 获取的月份 从 0 开始 到 11 结束
+      var day = nowDate.getDate();
+      console.log(year, month, day); // 2021 0 21
+
+      var hour = nowDate.getHours();
+      var min = nowDate.getMinutes();
+      var s = nowDate.getSeconds();
+
+      // 毫秒  1s===1000ms
+      var ms = nowDate.getMilliseconds();
+
+      console.log(hour, min, s, ms);
+
+      // 时间戳  获取这个时间 距离 1970年1月1日0:0:0(格林威治时间) 的  毫秒数
+      // 时间戳 的存在 是为了 统一时间的单位 以便于计算机保存
+      var stamp = nowDate.getTime();
+      console.log(stamp); // 毫秒数
+
+      console.log(Date.now()); // 获取当前时间 的时间戳
+
+      // 拼接字符串的知识 (常规技能)
+
+      // 格式化时间信息
+      // '当前时间:2020年10月31日 9:00:1'
+      var str = "当前时间:"+year +"年" +month +"月" +day +"日 " +hour +":" +min +":" +s;
+      console.log(str);
+
+      // 技巧 替换
+
+      var str1 = '当前时间:'+year+'年'+month+'月'+day+'日 '+hour+':'+min+':'+s+'';
+
+      // es6 模板字符串
+      // 反引号当中 可以直接只用  ${}  替换 
+
+      var str2 = `当前时间:${year}年${month}月${day}日 ${hour}:${min}:${s}`;
+      console.log(str2);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // js的调试
+      // 通过控制台的 报错信息 a is not defined(没有a这个变量)
+
+      // 逻辑问题 怎么解决  脑子里逐行 模拟代码运行
+      // 适时的进行打印 查看 数据此时有无问题
+
+      // 断点调试流程
+      // 运行程序一遍 ,打开控制台
+      //  source===> 要调试的文件
+      // 设置起点 和终点  (打断点)
+      // 运行程序  ==> 下一步 下一步
+      // 运行过程中 随时 监视 变量的变化   寻找 问题
+      var type = prompt("请输入汽油编号92或者97");
+      var num = prompt("请输入加油升数");
+
+      console.log(type, num); // prompt 录入的信息 都是字符串类型
+
+      if (type == 92) {
+        if (num >= 20) {
+          alert(num * 5.9);
+        } else {
+          alert(num * 6);
+        }
+      } else if (type == 97) {
+        if (num >= 30) {
+          alert(num * 6.95);
+        } else {
+          alert(num * 7);
+        }
+      } else {
+        alert("汽油编号有误");
+      }
+    </script>
+  </body>
+</html>

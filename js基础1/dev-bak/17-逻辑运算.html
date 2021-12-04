@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- 逻辑运算符 用来处理   条件比较多的情况  -->
+    <!-- 与  &&  (并且的意思)(同时满足才算满足) -->
+    <!-- 或  ||  (或者的意思)(满足其中一个条件 就算 满足) -->
+    <!-- 非  !   (否的意思)(取反,对一个布尔值取反)(而且带有隐式转换的功能) -->
+
+    <script>
+      var flag = true;
+      console.log(!flag);
+      var str = "hello";
+      console.log(!str); // 把 str 隐式转换成布尔值 ,再 取反
+
+      // var age = prompt("请输入您的年龄");
+      // 如何 表达 age 在不在 18--60之间
+      // 18<age<60 js中不能使用 连比
+      // console.log(age > 18 && age < 60);
+
+      // 不能考驾照的条件
+      // age<18||age>60
+
+      // 短路运算  逻辑运算 存在短路
+
+      // 或运算 遇到true 就结束
+      true || alert("你好");
+
+      // 且运算 遇到 false 就结束
+      true && alert("hello");
+
+      // 如果对**非布尔值**进行逻辑运算，则会**先将其转换为布尔值**
+      0 && alert("不凡");
+
+      // 逻辑运算的结果
+      // 是参与逻辑运算的条件中的  某一个 ,,到底是哪一个条件
+      // 谁起决定性作用 结果就是谁
+      var result = 5 || 6; // 把 5||6 的结果 赋给 result
+      console.log(result); // 5
+
+      var res = 5 && 6;
+      console.log(res); //6
+
+      // 总结:  或运算 遇到 true  就返回
+      // 且运算: 遇到 false  就返回
+    </script>
+  </body>
+</html>

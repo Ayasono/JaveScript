@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      var a = 10;
+      var b = 20;
+
+      // 如何交换 a和b 存储的数据
+      var temp = a; // 存储 a  变化之前的值,存储好之后,再对a 进行修改
+      a = b; // 把 b的值 赋给了 a  (a已经变了,之前的10 已经被覆盖了)
+
+      b = temp; // 要把a 之前的值 赋给 b
+      console.log(a, b);
+
+      // 如何 交换 数组当中的两个 元素
+
+      var arr = ["小明", "张三", "小红"];
+      // 想 交换  小明 和 小红的 位置
+      var temp = arr[0];
+      arr[0] = arr[2];
+      arr[2] = temp;
+      console.log(arr);
+    </script>
+  </body>
+</html>

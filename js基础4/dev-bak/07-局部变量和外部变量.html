@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 在函数内部创建的变量   叫做 局部变量 ,只能在该函数内部使用
+
+      function say() {
+        var a = "hello";
+      }
+      say();
+
+      // console.log(a); // a is not defined 函数内部的 a  在函数外边 使用 不了
+
+      // 外部变量  函数外边创建的变量
+      var b = 100;
+      // 外部声明的 变量 ,,函数内部 是可以使用的
+      function foo() {
+        console.log(b);
+      }
+      foo(); // 100
+    </script>
+  </body>
+</html>

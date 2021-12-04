@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // 对象的属性 是无序的
+      var user = {
+        name: "张三",
+        age: 26,
+        sex: "男",
+        children: {
+          name: "小明",
+        },
+        sayName: function () {
+          console.log("smyhvae");
+        },
+        like: ["篮球", "打游戏"],
+      };
+      // 如何给对象 添加  新数据(新属性)
+      // 对象.属性名 = 属性值;
+      user.h = 178;
+      user.weight = 60;
+      user.write = function () {
+        console.log("哈哈哈");
+      };
+      var book = {
+        name: "js编程",
+        pages: 234,
+      };
+
+      user.likeBook = book;
+      console.log(user);
+
+      // 如何获取对象中的属性
+      // 对象.属性名
+      console.log(user.name);
+      console.log(user.children);
+      console.log(user.children.name);
+      console.log(user.likeBook.pages);
+      console.log(user.like[1]);
+
+      console.log(user.sayName); // 函数
+      console.log(user.sayName()); //这个方法的 返回值 undefined
+
+      // 如何修改对象的 属性
+      // 对象.属性名 = 新值;
+      user.age = 30;
+      user.like[0] = "排球";
+      user.children.name = "小红";
+      console.log(user);
+
+      // 删除对象的属性
+      // delete 对象.属性
+      delete user.sex;
+      console.log(user);
+
+      // 注意事项
+      // 如果获取对象中没有的属性，不会报错而是返回`undefined`。
+      // 利用这个特征 判断 对象当中 存不存在某个属性
+      console.log(user.foo); // undefined
+    </script>
+  </body>
+</html>
